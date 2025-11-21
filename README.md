@@ -3,7 +3,6 @@
   SwiftVGGT: Scalable Visual Geometry Grounded Transformer for Large-Scale Scenes
   <br />
 </h1>
-<!-- <h3 align="center" style="color:#267CB9;">arXiv</h3> -->
   <p align="center">
     <a href="https://Jho-Yonsei.github.io/">Jungho Lee </a>&nbsp;·&nbsp;
     <a href="https://hydragon.co.kr">Minhyeok Lee</a>&nbsp;·&nbsp;
@@ -33,7 +32,7 @@
 </p>
 
 ## 🆕 News
-- 2025-11-21: Code, [[project page]](https://Jho-Yonsei.github.io/SwiftVGGT/), and [[arXiv paper]](https://arxiv.org/) are available.
+- 2025-11-21: Code, [[project page]](https://Jho-Yonsei.github.io/SwiftVGGT/) are available.
 
 ## 🔧 Installation
 Clone the repository and create an anaconda environment using.
