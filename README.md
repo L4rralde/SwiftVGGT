@@ -1,6 +1,6 @@
 <p align="center">
 <h1 align="center">
-  SwiftVGGT: Scalable Visual Geometry Grounded Transformer for Large-Scale Scenes
+  A SwiftVGGT: Scalable Visual Geometry Grounded Transformer for Large-Scale Scenes
   <br />
 </h1>
   <p align="center">
@@ -15,7 +15,7 @@
   </p>
   <p align="center">
     <a href="https://Jho-Yonsei.github.io/SwiftVGGT"><img src="https://img.shields.io/badge/SwiftVGGT-ProjectPage-blue.svg"></a>
-    <a href="https://arxiv.org/"><img src="https://img.shields.io/badge/SwiftVGGT-arXiv-red.svg"></a>
+    <a href="https://arxiv.org/abs/2511.18290"><img src="https://img.shields.io/badge/SwiftVGGT-arXiv-red.svg"></a>
   </p>
   <div align="center"></div>
 </p>
@@ -32,6 +32,7 @@
 </p>
 
 ## 🆕 News
+- 2025-11-25: [[arXiv paper]](https://arxiv.org/abs/2511.18290) is available.
 - 2025-11-21: Code, [[project page]](https://Jho-Yonsei.github.io/SwiftVGGT/) are available.
 
 ## 🔧 Installation
@@ -58,11 +59,17 @@ wget https://huggingface.co/facebook/VGGT_tracker_fixed/resolve/main/model_track
 mv model_tracker_fixed_e20.pt ckpt
 ```
 
-## 🔦 Inference & Evaluation
-For inference only, run
+
+## 🔦 Inference for Custom Data
+Put the ```--image_dir``` to your image path and run following command:
 ```
 CUDA_VISIBLE_DEVICES=<GPU> python run.py --image_dir <image_path> --output_path <output_path> --save_points
 ```
+
+If ```Out of Memory``` occurs, then set smaller ```--chunk_size``` and ```--overlap_size```.
+
+
+## 🔦 Inference & Evaluation
 
 For inference and evaluation of KITTI odometry dataset, just add ```--gt_pose_path``` as follows:
 ```
