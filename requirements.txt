@@ -1,9 +1,12 @@
-numpy==1.26.4
+#Python3.10
+numpy<2
 Pillow
+torch
+torchvision
 huggingface_hub
 einops
 safetensors
-evo==1.33.0
+evo
 open3d
 matplotlib
 scipy
