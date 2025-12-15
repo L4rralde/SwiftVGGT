@@ -368,6 +368,12 @@ class SwiftVGGT:
         
         save_camera_poses(self.camera_extrinsics, self.camera_intrinsics, sim3_list, self.args.output_path, num_imgs=self.vgg_input.shape[0])
         if self.args.save_points:
-            trimesh.PointCloud(points_3d, colors=colors).export(os.path.join(self.args.output_path, "./points_3d.ply"))
+            d = {
+                'points_3d': points_3d,
+                'colors': colors 
+            }
+            npz_path = os.path.join(self.args.output_path, "./points_3d.npz")
+            np.savez(npz_path, **d)
+            #trimesh.PointCloud(points_3d, colors=colors).export(os.path.join(self.args.output_path, "./points_3d.ply"))
             
             
